@@ -1,0 +1,256 @@
+@import "tailwindcss";
+
+:root {
+  --background: #faf7f2;
+  --foreground: #331f15;
+}
+
+.dark {
+  --background: #28201c;
+  --foreground: #f4ede0;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Force consistent dark mode backgrounds */
+.dark .bg-white {
+  background-color: #28201c !important;
+}
+
+.dark .bg-gray-50 {
+  background-color: #4c3d35 !important;
+}
+
+.dark .bg-gray-100 {
+  background-color: #5d4940 !important;
+}
+
+.dark .bg-gray-200 {
+  background-color: #71574a !important;
+}
+
+/* Force consistent text colors */
+.dark .text-gray-900 {
+  color: #f4ede0 !important;
+}
+
+.dark .text-gray-800 {
+  color: #f4ede0 !important;
+}
+
+.dark .text-gray-700 {
+  color: #e8d7c0 !important;
+}
+
+.dark .text-gray-600 {
+  color: #d9bc96 !important;
+}
+
+/* Replace all blue colors with coffee colors */
+.bg-blue-50 {
+  background-color: #faf7f2;
+}
+
+.dark .bg-blue-50 {
+  background-color: #4c3d35;
+}
+
+.bg-blue-100 {
+  background-color: #f4ede0;
+}
+
+.dark .bg-blue-100 {
+  background-color: #5d4940;
+}
+
+.bg-blue-600 {
+  background-color: #af6f3e;
+}
+
+.bg-blue-700 {
+  background-color: #925735;
+}
+
+.text-blue-600 {
+  color: #af6f3e;
+}
+
+.text-blue-700 {
+  color: #925735;
+}
+
+.text-blue-100 {
+  color: #f4ede0;
+}
+
+.border-blue-200 {
+  border-color: #e8d7c0;
+}
+
+.dark .border-blue-200 {
+  border-color: #925735;
+}
+
+.border-blue-600 {
+  border-color: #af6f3e;
+}
+
+.hover\:bg-blue-700:hover {
+  background-color: #925735;
+}
+
+.hover\:bg-blue-100:hover {
+  background-color: #f4ede0;
+}
+
+.dark .hover\:bg-blue-100:hover {
+  background-color: #5d4940;
+}
+
+.focus\:ring-blue-500:focus {
+  box-shadow: 0 0 0 2px rgba(175, 111, 62, 0.5);
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Custom gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #af6f3e 0%, #87543f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(250, 247, 242, 0.25);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(175, 111, 62, 0.18);
+}
+
+.dark .glass {
+  background: rgba(40, 32, 28, 0.25);
+  border: 1px solid rgba(244, 237, 224, 0.1);
+}
+
+/* Essential theme styles only */
+
+/* Elegant design improvements */
+.elegant-card {
+  background-color: var(--background);
+  border: 1px solid #e8d7c0;
+  border-radius: 0.75rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.dark .elegant-card {
+  border-color: #925735;
+}
+
+.elegant-card:hover {
+  box-shadow: 0 25px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.elegant-button {
+  background-color: #af6f3e;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transform: scale(1);
+}
+
+.elegant-button:hover {
+  background-color: #925735;
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.elegant-button-outline {
+  border: 2px solid #af6f3e;
+  color: #af6f3e;
+  background-color: transparent;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.dark .elegant-button-outline {
+  color: #c89d6a;
+  border-color: #af6f3e;
+}
+
+.elegant-button-outline:hover {
+  background-color: #af6f3e;
+  color: white;
+}
+
+.elegant-gradient {
+  background: linear-gradient(135deg, #af6f3e 0%, #87543f 50%, #6e4537 100%);
+}
+
+.elegant-text-gradient {
+  background: linear-gradient(135deg, #af6f3e 0%, #87543f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better focus states */
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(175, 111, 62, 0.5);
+}
