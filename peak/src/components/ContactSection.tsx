@@ -51,7 +51,7 @@ export default function ContactSection() {
               <p className="text-gray-600 mb-8">
                 Our team of e-commerce experts is here to help you find the perfect solution for your business. 
                 Whether you need a demo, have questions about pricing, or want to discuss a custom implementation, 
-                we're here to help.
+                we&apos;re here to help.
               </p>
             </div>
 
@@ -101,8 +101,8 @@ export default function ContactSection() {
             {/* Testimonial */}
             <div className="bg-background rounded-xl p-6 border-l-4 border-coffee-600 shadow-sm">
               <blockquote className="text-coffee-700 dark:text-coffee-200 italic mb-4">
-                "The Peak team was incredibly helpful throughout our migration. They understood our needs
-                and delivered exactly what we were looking for."
+                "                &ldquo;The Peak team was incredibly helpful throughout our migration. They understood our needs
+                and delivered exactly what we were looking for.&rdquo;"
               </blockquote>
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 bg-coffee-600 rounded-full flex items-center justify-center shadow-md">

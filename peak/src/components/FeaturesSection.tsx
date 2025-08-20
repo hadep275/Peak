@@ -204,6 +204,7 @@ export default function FeaturesSection() {
             {/* Image */}
             <div className="p-8 lg:p-12 flex items-center">
               <div className="w-full bg-white dark:bg-espresso-800 rounded-xl shadow-lg overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={features[activeTab].image}
                   alt={features[activeTab].title}

@@ -123,7 +123,7 @@ export default function CaseStudiesSection() {
 
                     <div className="bg-coffee-50 dark:bg-coffee-900/20 rounded-lg p-6 border border-coffee-200 dark:border-coffee-700">
                       <blockquote className="text-coffee-700 dark:text-coffee-200 italic mb-4">
-                        "{study.testimonial.quote}"
+                        "                        &ldquo;{study.testimonial.quote}&rdquo;"
                       </blockquote>
                       <div className="flex items-center space-x-3">
                         <div className="w-10 h-10 bg-coffee-600 rounded-full flex items-center justify-center">
