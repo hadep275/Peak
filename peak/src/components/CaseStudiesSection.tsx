@@ -5,7 +5,7 @@ import { ArrowUpIcon, ClockIcon, CurrencyDollarIcon } from '@heroicons/react/24/
 export default function CaseStudiesSection() {
   const caseStudies = [
     {
-      company: "Peak Skincare",
+      company: "Lumina Skincare",
       industry: "Beauty & Wellness",
       size: "Mid-market",
       logo: null,

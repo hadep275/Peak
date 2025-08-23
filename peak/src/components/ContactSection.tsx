@@ -110,7 +110,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <div className="font-semibold text-foreground">Luma Rae</div>
-                  <div className="text-sm text-coffee-600 dark:text-coffee-300">CEO, Peak Skincare</div>
+                  <div className="text-sm text-coffee-600 dark:text-coffee-300">CEO, Lumina Skincare</div>
                 </div>
               </div>
             </div>

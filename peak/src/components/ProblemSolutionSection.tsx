@@ -60,6 +60,7 @@ export default function ProblemSolutionSection() {
           </h2>
           <p className="text-xl text-coffee-600 dark:text-coffee-200 max-w-3xl mx-auto">
             Most e-commerce platforms force you to choose between simplicity and power.
+            <br/>
             Peak gives you both in one unified solution.
           </p>
         </div>
@@ -92,7 +93,7 @@ export default function ProblemSolutionSection() {
               <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
                 <CheckIcon className="w-5 h-5 text-green-600" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">Lumina Solution</h3>
+              <h3 className="text-2xl font-bold text-gray-900">Peak Solution</h3>
             </div>
 
             {solutions.map((solution, index) => (

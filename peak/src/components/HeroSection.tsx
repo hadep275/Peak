@@ -173,7 +173,7 @@ export default function HeroSection() {
           <p className="text-center text-sm text-coffee-500 dark:text-coffee-400 mb-8">Trusted by growing businesses worldwide</p>
           <div className="flex items-center justify-center space-x-8 lg:space-x-12 opacity-60 flex-wrap gap-4">
             {/* Placeholder for client logos */}
-            <div className="text-coffee-400 dark:text-coffee-500 font-semibold text-sm lg:text-base">PEAK SKINCARE</div>
+            <div className="text-coffee-400 dark:text-coffee-500 font-semibold text-sm lg:text-base">Lumina SKINCARE</div>
             <div className="text-coffee-400 dark:text-coffee-500 font-semibold text-sm lg:text-base">ARTISAN BAKERY</div>
             <div className="text-coffee-400 dark:text-coffee-500 font-semibold text-sm lg:text-base">TECH STARTUP</div>
             <div className="text-coffee-400 dark:text-coffee-500 font-semibold text-sm lg:text-base">RETAIL CHAIN</div>

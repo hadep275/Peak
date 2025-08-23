@@ -11,7 +11,7 @@ export default function FAQSection() {
       category: "Getting Started",
       questions: [
         {
-          question: "How long does it take to set up Lumina Commerce?",
+          question: "How long does it take to set up Peak Commerce?",
           answer: "Most businesses are up and running within 2-4 weeks. This includes data migration, customization, and team training. Our setup process is streamlined to minimize downtime."
         },
         {
@@ -85,7 +85,7 @@ export default function FAQSection() {
             Frequently Asked Questions
           </h2>
           <p className="text-xl text-gray-600">
-            Get answers to common questions about Lumina Commerce.
+            Get answers to common questions about Peak Commerce.
           </p>
         </div>
 

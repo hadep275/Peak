@@ -132,7 +132,8 @@ export default function FeaturesSection() {
           </h2>
           <p className="text-xl text-coffee-600 dark:text-coffee-200 max-w-3xl mx-auto">
             From e-commerce basics to advanced operational intelligence,
-            Lumina Commerce provides all the tools serious businesses need.
+            <br />
+            Peak Commerce provides all the tools serious businesses need.
           </p>
         </div>
 
