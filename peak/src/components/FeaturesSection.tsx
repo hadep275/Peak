@@ -27,7 +27,7 @@ export default function FeaturesSection() {
         "Customer service tools",
         "Role-based access control"
       ],
-      image: "/api/placeholder/600/400"
+      image: "https://via.placeholder.com/600x400/f4ede0/af6f3e?text=Admin+Panel"
     },
     {
       icon: UserGroupIcon,
@@ -40,7 +40,7 @@ export default function FeaturesSection() {
         "Communication history and notes",
         "Loyalty program management"
       ],
-      image: "/api/placeholder/600/400"
+      image: "https://via.placeholder.com/600x400/f4ede0/af6f3e?text=CRM+System"
     },
     {
       icon: BoltIcon,
@@ -53,7 +53,7 @@ export default function FeaturesSection() {
         "Trend analysis and reporting",
         "Custom KPI dashboards"
       ],
-      image: "/api/placeholder/600/400"
+      image: "https://via.placeholder.com/600x400/f4ede0/af6f3e?text=AI+Intelligence"
     },
     {
       icon: ChartBarIcon,
@@ -66,7 +66,7 @@ export default function FeaturesSection() {
         "Supplier integration",
         "Demand forecasting"
       ],
-      image: "/api/placeholder/600/400"
+      image: "https://via.placeholder.com/600x400/f4ede0/af6f3e?text=Inventory+Management"
     },
     {
       icon: EnvelopeIcon,
@@ -79,7 +79,7 @@ export default function FeaturesSection() {
         "A/B testing capabilities",
         "Advanced segmentation"
       ],
-      image: "/api/placeholder/600/400"
+      image: "https://via.placeholder.com/600x400/f4ede0/af6f3e?text=Email+Marketing"
     },
     {
       icon: TruckIcon,
@@ -92,7 +92,7 @@ export default function FeaturesSection() {
         "Tracking and notifications",
         "Returns management"
       ],
-      image: "/api/placeholder/600/400"
+      image: "https://via.placeholder.com/600x400/f4ede0/af6f3e?text=Shipping+Management"
     },
     {
       icon: CurrencyDollarIcon,
@@ -105,7 +105,7 @@ export default function FeaturesSection() {
         "Tax reporting tools",
         "Financial forecasting"
       ],
-      image: "/api/placeholder/600/400"
+      image: "https://via.placeholder.com/600x400/f4ede0/af6f3e?text=Financial+Dashboard"
     },
     {
       icon: ShieldCheckIcon,
@@ -118,7 +118,7 @@ export default function FeaturesSection() {
         "Data backup and recovery",
         "GDPR compliance tools"
       ],
-      image: "/api/placeholder/600/400"
+      image: "https://via.placeholder.com/600x400/f4ede0/af6f3e?text=Security+%26+Compliance"
     }
   ];
 
