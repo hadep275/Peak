@@ -18,25 +18,16 @@ export default function AboutPage() {
           <Image
             src="/Peak-logo.png"
             alt="Peak Logo Background"
-            width={800}
-            height={800}
-            className="w-96 h-96 md:w-[600px] md:h-[600px] object-contain"
+            width={1200}
+            height={1200}
+            className="w-[600px] h-[600px] md:w-[800px] md:h-[800px] lg:w-[1000px] lg:h-[1000px] object-contain"
           />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex items-center justify-center mb-8">
-            <Image
-              src="/Peak-logo.png"
-              alt="Peak Logo"
-              width={80}
-              height={80}
-              className="w-16 h-16 md:w-20 md:h-20 object-contain mr-4"
-            />
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-coffee-900 dark:text-coffee-50">
-              About Peak
-            </h1>
-          </div>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-coffee-900 dark:text-coffee-50 mb-8">
+            About Peak
+          </h1>
           <p className="text-xl md:text-2xl text-coffee-600 dark:text-coffee-200 max-w-4xl mx-auto leading-relaxed">
             We're building the future of e-commerce platforms for growing businesses.
             <span className="block mt-2 text-lg md:text-xl">
@@ -147,9 +138,9 @@ export default function AboutPage() {
                   <Image
                     src="/Peak-logo.png"
                     alt="Peak Logo"
-                    width={120}
-                    height={120}
-                    className="w-24 h-24 md:w-30 md:h-30 object-contain mx-auto mb-6"
+                    width={160}
+                    height={160}
+                    className="w-32 h-32 md:w-40 md:h-40 object-contain mx-auto mb-6"
                   />
                   <blockquote className="text-xl font-medium text-coffee-900 dark:text-coffee-50 mb-4">
                     "Technology should empower your business, not limit it."

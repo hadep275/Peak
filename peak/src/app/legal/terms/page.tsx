@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Footer from '@/components/Footer';
 
 export const metadata = {
@@ -23,41 +24,60 @@ export default function TermsPage() {
       {/* Content */}
       <section className="py-12 md:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg dark:prose-invert mx-auto text-coffee-900 dark:text-coffee-50">
-            <p><em>Last updated: {new Date().toLocaleDateString()}</em></p>
+          <div className="bg-white dark:bg-espresso-800 rounded-2xl shadow-xl p-8 md:p-12">
+            <div className="text-coffee-600 dark:text-coffee-400 text-sm mb-8">
+              <em>Last updated: {new Date().toLocaleDateString()}</em>
+            </div>
 
-            <h2>Acceptance of Terms</h2>
-            <p>
-              By accessing and using Peak's website and services, you accept and agree to be bound 
-              by the terms and provision of this agreement.
-            </p>
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-2xl font-bold text-coffee-900 dark:text-coffee-50 mb-4">Acceptance of Terms</h2>
+                <p className="text-coffee-700 dark:text-coffee-200">
+                  By accessing and using Peak's website and services, you accept and agree to be bound
+                  by the terms and provision of this agreement.
+                </p>
+              </div>
 
-            <h2>Use License</h2>
-            <p>
-              Permission is granted to temporarily download one copy of Peak's materials for personal, 
-              non-commercial transitory viewing only.
-            </p>
+              <div>
+                <h2 className="text-2xl font-bold text-coffee-900 dark:text-coffee-50 mb-4">Use License</h2>
+                <p className="text-coffee-700 dark:text-coffee-200">
+                  Permission is granted to temporarily download one copy of Peak's materials for personal,
+                  non-commercial transitory viewing only.
+                </p>
+              </div>
 
-            <h2>Disclaimer</h2>
-            <p>
-              The materials on Peak's website are provided on an 'as is' basis. Peak makes no warranties, 
-              expressed or implied, and hereby disclaims and negates all other warranties including without 
-              limitation, implied warranties or conditions of merchantability, fitness for a particular 
-              purpose, or non-infringement of intellectual property or other violation of rights.
-            </p>
+              <div>
+                <h2 className="text-2xl font-bold text-coffee-900 dark:text-coffee-50 mb-4">Disclaimer</h2>
+                <p className="text-coffee-700 dark:text-coffee-200">
+                  The materials on Peak's website are provided on an 'as is' basis. Peak makes no warranties,
+                  expressed or implied, and hereby disclaims and negates all other warranties including without
+                  limitation, implied warranties or conditions of merchantability, fitness for a particular
+                  purpose, or non-infringement of intellectual property or other violation of rights.
+                </p>
+              </div>
 
-            <h2>Limitations</h2>
-            <p>
-              In no event shall Peak or its suppliers be liable for any damages (including, without 
-              limitation, damages for loss of data or profit, or due to business interruption) arising 
-              out of the use or inability to use Peak's materials.
-            </p>
+              <div>
+                <h2 className="text-2xl font-bold text-coffee-900 dark:text-coffee-50 mb-4">Limitations</h2>
+                <p className="text-coffee-700 dark:text-coffee-200">
+                  In no event shall Peak or its suppliers be liable for any damages (including, without
+                  limitation, damages for loss of data or profit, or due to business interruption) arising
+                  out of the use or inability to use Peak's materials.
+                </p>
+              </div>
 
-            <h2>Contact Information</h2>
-            <p>
-              If you have any questions about these Terms of Service, please contact us through our 
-              contact form.
-            </p>
+              <div className="bg-coffee-50 dark:bg-coffee-900 rounded-lg p-6">
+                <h2 className="text-2xl font-bold text-coffee-900 dark:text-coffee-50 mb-4">Contact Information</h2>
+                <p className="text-coffee-700 dark:text-coffee-200 mb-4">
+                  If you have any questions about these Terms of Service, please contact us through our contact form.
+                </p>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center text-coffee-600 dark:text-coffee-400 hover:text-coffee-700 dark:hover:text-coffee-300 font-semibold"
+                >
+                  Contact Us →
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>

@@ -52,15 +52,15 @@ export default function HeroSection() {
               <div className="grid sm:grid-cols-3 gap-4">
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <span className="text-sm text-gray-600 dark:text-gray-300">Advanced CRM</span>
+                  <span className="text-sm text-coffee-700 dark:text-coffee-300">Advanced CRM</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <span className="text-sm text-gray-600 dark:text-gray-300">AI Intelligence</span>
+                  <span className="text-sm text-coffee-700 dark:text-coffee-300">AI Intelligence</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                  <span className="text-sm text-gray-600 dark:text-gray-300">All-in-One Platform</span>
+                  <span className="text-sm text-coffee-700 dark:text-coffee-300">All-in-One Platform</span>
                 </div>
               </div>
 

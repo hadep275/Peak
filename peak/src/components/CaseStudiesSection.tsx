@@ -88,8 +88,16 @@ export default function CaseStudiesSection() {
                 {/* Content */}
                 <div className="p-8 lg:p-12">
                   <div className="flex items-center space-x-4 mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-r from-coffee-600 to-chocolate-700 rounded-lg flex items-center justify-center">
-                      <span className="text-white font-bold text-lg">{study.company.charAt(0)}</span>
+                    <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center p-2">
+                      {study.company === "Lumina Skincare" ? (
+                        <img
+                          src="/assets/casestudy/Lumina.png"
+                          alt="Lumina Logo"
+                          className="w-full h-full object-contain"
+                        />
+                      ) : (
+                        <span className="text-coffee-600 font-bold text-lg">{study.company.charAt(0)}</span>
+                      )}
                     </div>
                     <div>
                       {study.company === "Lumina Skincare" ? (

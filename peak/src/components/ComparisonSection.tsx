@@ -47,23 +47,23 @@ export default function ComparisonSection() {
             <div key={index} className="bg-coffee-50 dark:bg-espresso-900 rounded-2xl overflow-hidden shadow-lg">
               <div className="p-8">
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">{comparison.title}</h3>
-                  <p className="text-gray-600">{comparison.subtitle}</p>
+                  <h3 className="text-2xl font-bold text-coffee-900 dark:text-coffee-50 mb-2">{comparison.title}</h3>
+                  <p className="text-coffee-600 dark:text-coffee-200">{comparison.subtitle}</p>
                 </div>
 
                 <div className="overflow-x-auto">
                   <table className="w-full">
                     <thead>
-                      <tr className="border-b border-gray-200">
-                        <th className="text-left py-4 px-4 font-semibold text-foreground">Feature</th>
+                      <tr className="border-b border-coffee-200 dark:border-coffee-700">
+                        <th className="text-left py-4 px-4 font-semibold text-coffee-900 dark:text-coffee-50">Feature</th>
                         <th className="text-center py-4 px-4 font-semibold text-coffee-600 dark:text-coffee-400">Peak</th>
-                        <th className="text-center py-4 px-4 font-semibold text-foreground">Alternative</th>
+                        <th className="text-center py-4 px-4 font-semibold text-coffee-900 dark:text-coffee-50">Alternative</th>
                       </tr>
                     </thead>
                     <tbody>
                       {comparison.features.map((feature, featureIndex) => (
-                        <tr key={featureIndex} className="border-b border-gray-100">
-                          <td className="py-4 px-4 font-medium text-gray-900 dark:text-white">{feature.name}</td>
+                        <tr key={featureIndex} className="border-b border-coffee-100 dark:border-coffee-800">
+                          <td className="py-4 px-4 font-medium text-coffee-900 dark:text-coffee-50">{feature.name}</td>
                           <td className="py-4 px-4 text-center">
                             {typeof feature.peak === 'boolean' ? (
                               feature.peak ? (
@@ -73,7 +73,7 @@ export default function ComparisonSection() {
                               )
                             ) : (
                               <span className={`font-semibold ${
-                                feature.advantage === 'peak' ? 'text-green-600' : 'text-gray-900 dark:text-white'
+                                feature.advantage === 'peak' ? 'text-green-600 dark:text-green-400' : 'text-coffee-900 dark:text-coffee-50'
                               }`}>
                                 {feature.peak}
                               </span>
@@ -88,7 +88,7 @@ export default function ComparisonSection() {
                               )
                             ) : (
                               <span className={`font-semibold ${
-                                feature.advantage === 'competitor' ? 'text-green-600' : 'text-gray-600 dark:text-gray-400'
+                                feature.advantage === 'competitor' ? 'text-green-600 dark:text-green-400' : 'text-coffee-600 dark:text-coffee-300'
                               }`}>
                                 {feature.competitor}
                               </span>

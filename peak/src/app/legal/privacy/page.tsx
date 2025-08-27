@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Footer from '@/components/Footer';
 
 export const metadata = {
@@ -23,48 +24,91 @@ export default function PrivacyPage() {
       {/* Content */}
       <section className="py-12 md:py-20">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="prose prose-lg dark:prose-invert mx-auto text-coffee-900 dark:text-coffee-50">
-            <p><em>Last updated: {new Date().toLocaleDateString()}</em></p>
+          <div className="bg-white dark:bg-espresso-800 rounded-2xl shadow-xl p-8 md:p-12">
+            <div className="text-coffee-600 dark:text-coffee-400 text-sm mb-8">
+              <em>Last updated: {new Date().toLocaleDateString()}</em>
+            </div>
 
-            <h2>Information We Collect</h2>
-            <p>
-              We collect information you provide directly to us, such as when you:
-            </p>
-            <ul>
-              <li>Fill out our contact forms</li>
-              <li>Subscribe to our newsletter</li>
-              <li>Request a demo or pricing information</li>
-              <li>Communicate with our support team</li>
-            </ul>
+            <div className="space-y-8">
+              <div>
+                <h2 className="text-2xl font-bold text-coffee-900 dark:text-coffee-50 mb-4">Information We Collect</h2>
+                <p className="text-coffee-700 dark:text-coffee-200 mb-4">
+                  We collect information you provide directly to us, such as when you:
+                </p>
+                <ul className="space-y-2 text-coffee-700 dark:text-coffee-200">
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-coffee-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Fill out our contact forms</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-coffee-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Subscribe to our newsletter</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-coffee-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Request a demo or pricing information</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-coffee-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Communicate with our support team</span>
+                  </li>
+                </ul>
+              </div>
 
-            <h2>How We Use Your Information</h2>
-            <p>
-              We use the information we collect to:
-            </p>
-            <ul>
-              <li>Respond to your inquiries and provide customer support</li>
-              <li>Send you marketing communications (with your consent)</li>
-              <li>Improve our website and services</li>
-              <li>Comply with legal obligations</li>
-            </ul>
+              <div>
+                <h2 className="text-2xl font-bold text-coffee-900 dark:text-coffee-50 mb-4">How We Use Your Information</h2>
+                <p className="text-coffee-700 dark:text-coffee-200 mb-4">
+                  We use the information we collect to:
+                </p>
+                <ul className="space-y-2 text-coffee-700 dark:text-coffee-200">
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-coffee-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Respond to your inquiries and provide customer support</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-coffee-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Send you marketing communications (with your consent)</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-coffee-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Improve our website and services</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <div className="w-2 h-2 bg-coffee-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <span>Comply with legal obligations</span>
+                  </li>
+                </ul>
+              </div>
 
-            <h2>Information Sharing</h2>
-            <p>
-              We do not sell, trade, or otherwise transfer your personal information to third parties 
-              without your consent, except as described in this policy.
-            </p>
+              <div>
+                <h2 className="text-2xl font-bold text-coffee-900 dark:text-coffee-50 mb-4">Information Sharing</h2>
+                <p className="text-coffee-700 dark:text-coffee-200">
+                  We do not sell, trade, or otherwise transfer your personal information to third parties
+                  without your consent, except as described in this policy.
+                </p>
+              </div>
 
-            <h2>Data Security</h2>
-            <p>
-              We implement appropriate security measures to protect your personal information against 
-              unauthorized access, alteration, disclosure, or destruction.
-            </p>
+              <div>
+                <h2 className="text-2xl font-bold text-coffee-900 dark:text-coffee-50 mb-4">Data Security</h2>
+                <p className="text-coffee-700 dark:text-coffee-200">
+                  We implement appropriate security measures to protect your personal information against
+                  unauthorized access, alteration, disclosure, or destruction.
+                </p>
+              </div>
 
-            <h2>Contact Us</h2>
-            <p>
-              If you have any questions about this Privacy Policy, please contact us through our 
-              contact form.
-            </p>
+              <div className="bg-coffee-50 dark:bg-coffee-900 rounded-lg p-6">
+                <h2 className="text-2xl font-bold text-coffee-900 dark:text-coffee-50 mb-4">Contact Us</h2>
+                <p className="text-coffee-700 dark:text-coffee-200 mb-4">
+                  If you have any questions about this Privacy Policy, please contact us through our contact form.
+                </p>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center text-coffee-600 dark:text-coffee-400 hover:text-coffee-700 dark:hover:text-coffee-300 font-semibold"
+                >
+                  Contact Us →
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>

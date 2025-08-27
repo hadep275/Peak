@@ -14,7 +14,6 @@ export default function Navigation() {
     { name: 'Home', href: '/' },
     { name: 'Pricing', href: '/pricing' },
     { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
   ];
 
   return (
@@ -49,6 +48,12 @@ export default function Navigation() {
               </Link>
             ))}
             <ThemeToggle />
+            <Link
+              href="/contact"
+              className="bg-coffee-600 hover:bg-coffee-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors duration-200 shadow-sm border border-coffee-600 hover:border-coffee-700"
+            >
+              Get Started
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -88,7 +93,13 @@ export default function Navigation() {
                   {link.name}
                 </Link>
               ))}
-
+              <Link
+                href="/contact"
+                onClick={() => setIsMenuOpen(false)}
+                className="bg-coffee-600 hover:bg-coffee-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center shadow-sm mt-2 border border-coffee-600 hover:border-coffee-700"
+              >
+                Get Started
+              </Link>
             </div>
           </div>
         )}
