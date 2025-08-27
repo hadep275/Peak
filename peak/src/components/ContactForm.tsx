@@ -45,7 +45,8 @@ export default function ContactForm({
       // Use environment variable for Formspree endpoint
       const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID;
       if (!formspreeId) {
-        throw new Error('Formspree ID not configured');
+        console.error('Environment variables:', process.env);
+        throw new Error('Formspree ID not configured. Please check your .env.local file.');
       }
 
       const response = await fetch(`https://formspree.io/f/${formspreeId}`, {
@@ -207,7 +208,7 @@ export default function ContactForm({
 
         <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="revenue" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="revenue" className="block text-sm font-medium text-coffee-700 dark:text-coffee-200 mb-2">
               Annual Revenue
             </label>
             <select
@@ -215,19 +216,19 @@ export default function ContactForm({
               name="revenue"
               value={formData.revenue}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full px-4 py-3 border border-coffee-300 dark:border-coffee-600 rounded-lg focus:ring-2 focus:ring-coffee-500 focus:border-coffee-500 bg-white dark:bg-espresso-800 text-coffee-900 dark:text-coffee-50"
             >
-              <option value="">Select range</option>
-              <option value="under-100k">Under $100K</option>
-              <option value="100k-500k">$100K - $500K</option>
-              <option value="500k-1m">$500K - $1M</option>
-              <option value="1m-5m">$1M - $5M</option>
-              <option value="over-5m">Over $5M</option>
+              <option value="" className="bg-white dark:bg-espresso-800 text-coffee-900 dark:text-coffee-50">Select range</option>
+              <option value="under-100k" className="bg-white dark:bg-espresso-800 text-coffee-900 dark:text-coffee-50">Under $100K</option>
+              <option value="100k-500k" className="bg-white dark:bg-espresso-800 text-coffee-900 dark:text-coffee-50">$100K - $500K</option>
+              <option value="500k-1m" className="bg-white dark:bg-espresso-800 text-coffee-900 dark:text-coffee-50">$500K - $1M</option>
+              <option value="1m-5m" className="bg-white dark:bg-espresso-800 text-coffee-900 dark:text-coffee-50">$1M - $5M</option>
+              <option value="over-5m" className="bg-white dark:bg-espresso-800 text-coffee-900 dark:text-coffee-50">Over $5M</option>
             </select>
           </div>
 
           <div>
-            <label htmlFor="currentPlatform" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="currentPlatform" className="block text-sm font-medium text-coffee-700 dark:text-coffee-200 mb-2">
               Current Platform
             </label>
             <select
@@ -235,16 +236,16 @@ export default function ContactForm({
               name="currentPlatform"
               value={formData.currentPlatform}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full px-4 py-3 border border-coffee-300 dark:border-coffee-600 rounded-lg focus:ring-2 focus:ring-coffee-500 focus:border-coffee-500 bg-white dark:bg-espresso-800 text-coffee-900 dark:text-coffee-50"
             >
-              <option value="">Select platform</option>
-              <option value="shopify">Shopify</option>
-              <option value="shopify-plus">Shopify Plus</option>
-              <option value="woocommerce">WooCommerce</option>
-              <option value="magento">Magento</option>
-              <option value="bigcommerce">BigCommerce</option>
-              <option value="custom">Custom Solution</option>
-              <option value="other">Other</option>
+              <option value="" className="bg-white dark:bg-espresso-800 text-coffee-900 dark:text-coffee-50">Select platform</option>
+              <option value="shopify" className="bg-white dark:bg-espresso-800 text-coffee-900 dark:text-coffee-50">Shopify</option>
+              <option value="shopify-plus" className="bg-white dark:bg-espresso-800 text-coffee-900 dark:text-coffee-50">Shopify Plus</option>
+              <option value="woocommerce" className="bg-white dark:bg-espresso-800 text-coffee-900 dark:text-coffee-50">WooCommerce</option>
+              <option value="magento" className="bg-white dark:bg-espresso-800 text-coffee-900 dark:text-coffee-50">Magento</option>
+              <option value="bigcommerce" className="bg-white dark:bg-espresso-800 text-coffee-900 dark:text-coffee-50">BigCommerce</option>
+              <option value="custom" className="bg-white dark:bg-espresso-800 text-coffee-900 dark:text-coffee-50">Custom Solution</option>
+              <option value="other" className="bg-white dark:bg-espresso-800 text-coffee-900 dark:text-coffee-50">Other</option>
             </select>
           </div>
         </div>

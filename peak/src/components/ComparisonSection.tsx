@@ -110,7 +110,10 @@ export default function ComparisonSection() {
             <p className="text-coffee-100 mb-6 max-w-2xl mx-auto">
               Join hundreds of businesses that have already made the smart choice.
             </p>
-            <button className="bg-white text-coffee-600 px-8 py-3 rounded-lg font-semibold hover:bg-coffee-50 transition-colors shadow-lg">
+            <button
+              onClick={() => document.querySelector('#contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-white text-coffee-600 px-8 py-3 rounded-lg font-semibold hover:bg-coffee-50 transition-colors shadow-lg"
+            >
               Start Your Migration
             </button>
           </div>

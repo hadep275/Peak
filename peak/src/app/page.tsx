@@ -9,6 +9,7 @@ import FAQSection from '@/components/FAQSection';
 import ContactSection from '@/components/ContactSection';
 import Footer from '@/components/Footer';
 
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-background text-foreground transition-all duration-300">

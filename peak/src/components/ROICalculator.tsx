@@ -67,10 +67,12 @@ export default function ROICalculator() {
                 <select
                   value={currentPlatform}
                   onChange={(e) => setCurrentPlatform(e.target.value)}
-                  className="w-full p-3 border border-coffee-300 dark:border-coffee-600 rounded-lg focus:ring-2 focus:ring-coffee-500 focus:border-coffee-500 dark:bg-espresso-800 dark:text-coffee-50 bg-white"
+                  className="w-full p-3 border border-coffee-300 dark:border-coffee-600 rounded-lg focus:ring-2 focus:ring-coffee-500 focus:border-coffee-500 dark:bg-espresso-800 dark:text-coffee-50 bg-white text-coffee-900 dark:text-coffee-50"
                 >
                   {Object.entries(platforms).map(([key, platform]) => (
-                    <option key={key} value={key}>{platform.name}</option>
+                    <option key={key} value={key} className="bg-white dark:bg-espresso-800 text-coffee-900 dark:text-coffee-50">
+                      {platform.name}
+                    </option>
                   ))}
                 </select>
               </div>

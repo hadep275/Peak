@@ -225,7 +225,10 @@ export default function FeaturesSection() {
             <p className="text-coffee-100 mb-6 max-w-2xl mx-auto">
               Book a personalized demo and see how Peak can transform your business operations.
             </p>
-            <button className="bg-white text-coffee-600 px-8 py-3 rounded-lg font-semibold hover:bg-coffee-50 transition-colors">
+            <button
+              onClick={() => document.querySelector('#contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+              className="bg-white text-coffee-600 px-8 py-3 rounded-lg font-semibold hover:bg-coffee-50 transition-colors"
+            >
               Schedule Demo
             </button>
           </div>

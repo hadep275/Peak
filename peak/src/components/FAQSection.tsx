@@ -142,12 +142,12 @@ export default function FAQSection() {
             <p className="text-coffee-600 dark:text-coffee-200 mb-6">
               Our team is here to help you find the perfect solution for your business.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-coffee-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-coffee-700 transition-colors shadow-md">
-                Schedule a Call
-              </button>
-              <button className="border border-coffee-300 dark:border-coffee-600 text-coffee-700 dark:text-coffee-200 px-6 py-3 rounded-lg font-semibold hover:bg-coffee-100 dark:hover:bg-coffee-800 transition-colors">
-                Email Support
+            <div className="flex justify-center">
+              <button
+                onClick={() => document.querySelector('#contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+                className="bg-coffee-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-coffee-700 transition-colors shadow-md"
+              >
+                Contact Us
               </button>
             </div>
           </div>

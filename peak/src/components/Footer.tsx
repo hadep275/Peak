@@ -1,6 +1,7 @@
 'use client';
 
 import { EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/outline';
+import NewsletterSignup from './NewsletterSignup';
 
 export default function Footer() {
   const footerLinks = {
@@ -38,7 +39,7 @@ export default function Footer() {
     <footer className="bg-espresso-950 dark:bg-espresso-950 text-coffee-50">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
-        <div className="grid lg:grid-cols-6 gap-8">
+        <div className="grid lg:grid-cols-8 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
@@ -132,29 +133,14 @@ export default function Footer() {
               ))}
             </ul>
           </div>
-        </div>
 
-        {/* Newsletter Signup */}
-        <div className="border-t border-coffee-800 mt-12 pt-8">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 className="text-lg font-semibold mb-2">Stay Updated</h3>
-              <p className="text-coffee-200">
-                Get the latest updates on new features, case studies, and e-commerce insights.
-              </p>
-            </div>
-            <div className="flex space-x-4">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-espresso-900 border border-coffee-700 rounded-lg focus:ring-2 focus:ring-coffee-500 focus:border-coffee-500 text-coffee-50 placeholder-coffee-400"
-              />
-              <button className="bg-coffee-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-coffee-700 transition-colors">
-                Subscribe
-              </button>
-            </div>
+          {/* Newsletter Signup */}
+          <div className="lg:col-span-2">
+            <NewsletterSignup />
           </div>
         </div>
+
+
       </div>
 
       {/* Bottom Bar */}

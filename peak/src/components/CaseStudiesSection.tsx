@@ -178,10 +178,20 @@ export default function CaseStudiesSection() {
               Join these successful businesses and see what Peak can do for your growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-coffee-600 px-8 py-3 rounded-lg font-semibold hover:bg-coffee-50 transition-colors shadow-md">
+              <button
+                onClick={() => document.querySelector('#contact-form')?.scrollIntoView({ behavior: 'smooth' })}
+                className="bg-white text-coffee-600 px-8 py-3 rounded-lg font-semibold hover:bg-coffee-50 transition-colors shadow-md"
+              >
                 Schedule Demo
               </button>
-              <button className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-coffee-600 transition-colors">
+              <button
+                onClick={() => {
+                  // For now, this will trigger the contact form
+                  // Later you can replace with actual PDF download
+                  document.querySelector('#contact-form')?.scrollIntoView({ behavior: 'smooth' });
+                }}
+                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-coffee-600 transition-colors"
+              >
                 Download Case Study
               </button>
             </div>

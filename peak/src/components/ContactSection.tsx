@@ -9,19 +9,13 @@ export default function ContactSection() {
       icon: EnvelopeIcon,
       title: "Contact Method",
       details: "Contact Form Only",
-      subtext: "We respond within 24 hours"
+      subtext: "< 24 hours response time"
     },
     {
       icon: MapPinIcon,
       title: "Location",
       details: "Calgary, AB, Canada",
       subtext: "Remote-first company"
-    },
-    {
-      icon: ClockIcon,
-      title: "Response Time",
-      details: "< 24 hours",
-      subtext: "Average response time"
     }
   ];
 
@@ -120,26 +114,7 @@ export default function ContactSection() {
           </div>
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-coffee-600 to-chocolate-700 rounded-2xl p-8 text-white shadow-xl">
-            <h3 className="text-2xl font-bold mb-4">
-              Prefer to Talk Directly?
-            </h3>
-            <p className="text-coffee-100 mb-6 max-w-2xl mx-auto">
-              Schedule a call with our team to discuss your specific needs and get answers to all your questions.
-            </p>
-            <div className="flex justify-center">
-              <button
-                onClick={() => document.querySelector('#contact-form')?.scrollIntoView({ behavior: 'smooth' })}
-                className="bg-white text-coffee-600 px-8 py-3 rounded-lg font-semibold hover:bg-coffee-50 transition-colors inline-flex items-center justify-center space-x-2 shadow-md"
-              >
-                <EnvelopeIcon className="w-5 h-5" />
-                <span>Use Contact Form</span>
-              </button>
-            </div>
-          </div>
-        </div>
+
       </div>
     </section>
   );
