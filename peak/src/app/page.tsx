@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import HeroSection from '@/components/HeroSection';
 import ProblemSolutionSection from '@/components/ProblemSolutionSection';
 import FeaturesSection from '@/components/FeaturesSection';
@@ -27,18 +28,18 @@ export default function Home() {
             Join hundreds of businesses that have already made the smart choice with Peak.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <Link
               href="/contact"
               className="bg-white text-coffee-600 px-8 py-4 rounded-lg font-semibold hover:bg-coffee-50 transition-colors shadow-lg"
             >
               Get Started Today
-            </a>
-            <a
+            </Link>
+            <Link
               href="/pricing"
               className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-coffee-600 transition-colors"
             >
               View Pricing
-            </a>
+            </Link>
           </div>
         </div>
       </section>

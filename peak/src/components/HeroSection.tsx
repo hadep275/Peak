@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { ChevronRightIcon, ShieldCheckIcon, StarIcon } from '@heroicons/react/24/solid';
 import { PlayIcon } from '@heroicons/react/24/outline';
 import ContactForm from './ContactForm';
@@ -72,12 +73,12 @@ export default function HeroSection() {
                   <span>Book Free Demo</span>
                   <ChevronRightIcon className="w-4 h-4" />
                 </button>
-                <a
+                <Link
                   href="/pricing"
                   className="elegant-button-outline text-center"
                 >
                   View Pricing
-                </a>
+                </Link>
               </div>
 
               {/* Social Proof */}
