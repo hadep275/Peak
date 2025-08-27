@@ -191,6 +191,54 @@ body {
   box-shadow: 0 0 0 2px rgba(175, 111, 62, 0.5);
 }
 
+/* Force external link arrows to use coffee colors and remove blue backgrounds */
+a[target="_blank"] {
+  color: inherit !important;
+  background-color: transparent !important;
+  text-decoration: none !important;
+}
+
+a[target="_blank"]:hover {
+  background-color: transparent !important;
+}
+
+a[target="_blank"]:focus {
+  background-color: transparent !important;
+  outline: none !important;
+}
+
+a[target="_blank"]:active {
+  background-color: transparent !important;
+}
+
+a[target="_blank"] span {
+  color: #af6f3e !important;
+  background-color: transparent !important;
+}
+
+.dark a[target="_blank"] span {
+  color: #c89d6a !important;
+  background-color: transparent !important;
+}
+
+/* Force all external link text to use coffee colors */
+a[href^="http"] {
+  color: #af6f3e !important;
+  background-color: transparent !important;
+  text-decoration: none !important;
+}
+
+a[href^="http"]:hover,
+a[href^="http"]:focus,
+a[href^="http"]:active {
+  background-color: transparent !important;
+}
+
+.dark a[href^="http"] {
+  color: #c89d6a !important;
+  background-color: transparent !important;
+}
+
 .animation-delay-2000 {
   animation-delay: 2s;
 }
