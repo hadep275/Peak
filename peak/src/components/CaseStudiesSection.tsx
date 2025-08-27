@@ -92,7 +92,18 @@ export default function CaseStudiesSection() {
                       <span className="text-white font-bold text-lg">{study.company.charAt(0)}</span>
                     </div>
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 dark:text-coffee-50">{study.company}</h3>
+                      {study.company === "Lumina Skincare" ? (
+                        <a
+                          href="https://luminaco.skin"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xl font-bold text-gray-900 dark:text-coffee-50 hover:text-coffee-600 dark:hover:text-coffee-400 transition-colors"
+                        >
+                          {study.company} ↗
+                        </a>
+                      ) : (
+                        <h3 className="text-xl font-bold text-gray-900 dark:text-coffee-50">{study.company}</h3>
+                      )}
                       <p className="text-gray-600 dark:text-coffee-200">{study.industry} • {study.size}</p>
                     </div>
                   </div>
