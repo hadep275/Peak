@@ -20,10 +20,10 @@ export default function AboutPage() {
             alt="Peak Logo Background"
             width={1200}
             height={1200}
-            className="object-contain opacity-50 dark:opacity-60"
+            className="object-contain opacity-15 dark:opacity-15"
             style={{
-              width: '120vw',
-              height: '120vh',
+              width: '2200vw',
+              height: '2200vh',
               minWidth: '800px',
               minHeight: '800px'
             }}
@@ -41,8 +41,7 @@ export default function AboutPage() {
             </span>
           </p>
         </div>
-      </section>
-
+      
       {/* Mission Section */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,6 +56,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
 
       {/* Values Section */}
       <section className="py-20 bg-coffee-50 dark:bg-espresso-900">
@@ -113,7 +113,7 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
+</section>
       {/* Story Section */}
       <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -160,12 +160,12 @@ export default function AboutPage() {
       </section>
 
       {/* Location & CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-coffee-600 to-chocolate-700">
+      <section className="py-20" style={{ background: 'linear-gradient(to right, #af6f3e, #87543f)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: 'white' }}>
             Based in Calgary, Serving the World
           </h2>
-          <p className="text-xl text-coffee-100 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl mb-8 max-w-3xl mx-auto" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
             We're proudly based in Calgary, Alberta, Canada, but we serve businesses globally.
             Our remote-first approach means we can work with you wherever you are.
           </p>
@@ -178,7 +178,7 @@ export default function AboutPage() {
             </Link>
             <Link
               href="/pricing"
-              className="border border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-coffee-600 transition-colors"
+              className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-coffee-600 transition-colors"
             >
               See Our Plans
             </Link>
