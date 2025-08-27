@@ -104,11 +104,11 @@ export default function FAQSection() {
                   return (
                     <div key={faqIndex}>
                       <button
-                        className="w-full px-6 py-4 text-left hover:bg-gray-50 transition-colors"
+                        className="w-full px-6 py-4 text-left hover:bg-coffee-50 dark:hover:bg-coffee-900 transition-colors"
                         onClick={() => setOpenFAQ(isOpen ? null : globalIndex)}
                       >
                         <div className="flex items-center justify-between">
-                          <h4 className="text-lg font-medium text-gray-900 pr-4">
+                          <h4 className="text-lg font-medium text-coffee-900 dark:text-coffee-50 pr-4">
                             {faq.question}
                           </h4>
                           <ChevronDownIcon 

@@ -1,10 +1,22 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
-import { EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/outline';
+import Image from 'next/image';
+import { EnvelopeIcon, MapPinIcon, ChevronDownIcon, ChevronUpIcon } from '@heroicons/react/24/outline';
 import NewsletterSignup from './NewsletterSignup';
 
 export default function Footer() {
+  const [openSections, setOpenSections] = useState<string[]>([]);
+
+  const toggleSection = (section: string) => {
+    setOpenSections(prev =>
+      prev.includes(section)
+        ? prev.filter(s => s !== section)
+        : [...prev, section]
+    );
+  };
+
   const footerLinks = {
     product: [
       { name: 'Features', href: '#features' },
@@ -39,11 +51,15 @@ export default function Footer() {
         <div className="grid lg:grid-cols-8 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-gradient-to-r from-coffee-600 to-chocolate-700 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">P</span>
-              </div>
-              <span className="text-xl font-bold">Peak</span>
+            <div className="flex items-center space-x-3 mb-6">
+              <Image
+                src="/Peak-logo.png"
+                alt="Peak Logo"
+                width={32}
+                height={32}
+                className="w-8 h-8 object-contain"
+              />
+              <span className="text-xl font-bold text-coffee-50">Peak</span>
             </div>
 
             <p className="text-coffee-200 mb-6 leading-relaxed">
@@ -64,7 +80,7 @@ export default function Footer() {
           </div>
 
           {/* Product Links */}
-          <div>
+          <div className="hidden lg:block">
             <h3 className="text-lg font-semibold mb-4">Product</h3>
             <ul className="space-y-3">
               {footerLinks.product.map((link, index) => (
@@ -80,8 +96,37 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Mobile Collapsible Product Links */}
+          <div className="lg:hidden">
+            <button
+              onClick={() => toggleSection('product')}
+              className="flex items-center justify-between w-full text-lg font-semibold mb-4 text-coffee-50"
+            >
+              Product
+              {openSections.includes('product') ? (
+                <ChevronUpIcon className="w-5 h-5" />
+              ) : (
+                <ChevronDownIcon className="w-5 h-5" />
+              )}
+            </button>
+            {openSections.includes('product') && (
+              <ul className="space-y-3 mb-6">
+                {footerLinks.product.map((link, index) => (
+                  <li key={index}>
+                    <Link
+                      href={link.href}
+                      className="text-coffee-200 hover:text-coffee-50 transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+
           {/* Company Links */}
-          <div>
+          <div className="hidden lg:block">
             <h3 className="text-lg font-semibold mb-4">Company</h3>
             <ul className="space-y-3">
               {footerLinks.company.map((link, index) => (
@@ -97,8 +142,37 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Mobile Collapsible Company Links */}
+          <div className="lg:hidden">
+            <button
+              onClick={() => toggleSection('company')}
+              className="flex items-center justify-between w-full text-lg font-semibold mb-4 text-coffee-50"
+            >
+              Company
+              {openSections.includes('company') ? (
+                <ChevronUpIcon className="w-5 h-5" />
+              ) : (
+                <ChevronDownIcon className="w-5 h-5" />
+              )}
+            </button>
+            {openSections.includes('company') && (
+              <ul className="space-y-3 mb-6">
+                {footerLinks.company.map((link, index) => (
+                  <li key={index}>
+                    <Link
+                      href={link.href}
+                      className="text-coffee-200 hover:text-coffee-50 transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+
           {/* Support Links */}
-          <div>
+          <div className="hidden lg:block">
             <h3 className="text-lg font-semibold mb-4">Support</h3>
             <ul className="space-y-3">
               {footerLinks.support.map((link, index) => (
@@ -114,8 +188,37 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Mobile Collapsible Support Links */}
+          <div className="lg:hidden">
+            <button
+              onClick={() => toggleSection('support')}
+              className="flex items-center justify-between w-full text-lg font-semibold mb-4 text-coffee-50"
+            >
+              Support
+              {openSections.includes('support') ? (
+                <ChevronUpIcon className="w-5 h-5" />
+              ) : (
+                <ChevronDownIcon className="w-5 h-5" />
+              )}
+            </button>
+            {openSections.includes('support') && (
+              <ul className="space-y-3 mb-6">
+                {footerLinks.support.map((link, index) => (
+                  <li key={index}>
+                    <Link
+                      href={link.href}
+                      className="text-coffee-200 hover:text-coffee-50 transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+
           {/* Legal Links */}
-          <div>
+          <div className="hidden lg:block">
             <h3 className="text-lg font-semibold mb-4">Legal</h3>
             <ul className="space-y-3">
               {footerLinks.legal.map((link, index) => (
@@ -129,6 +232,35 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
+          </div>
+
+          {/* Mobile Collapsible Legal Links */}
+          <div className="lg:hidden">
+            <button
+              onClick={() => toggleSection('legal')}
+              className="flex items-center justify-between w-full text-lg font-semibold mb-4 text-coffee-50"
+            >
+              Legal
+              {openSections.includes('legal') ? (
+                <ChevronUpIcon className="w-5 h-5" />
+              ) : (
+                <ChevronDownIcon className="w-5 h-5" />
+              )}
+            </button>
+            {openSections.includes('legal') && (
+              <ul className="space-y-3 mb-6">
+                {footerLinks.legal.map((link, index) => (
+                  <li key={index}>
+                    <Link
+                      href={link.href}
+                      className="text-coffee-200 hover:text-coffee-50 transition-colors"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            )}
           </div>
 
           {/* Newsletter Signup */}

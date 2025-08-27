@@ -73,7 +73,7 @@ export default function HeroSection() {
                   <ChevronRightIcon className="w-4 h-4" />
                 </button>
                 <a
-                  href="#pricing"
+                  href="/pricing"
                   className="elegant-button-outline text-center"
                 >
                   View Pricing
@@ -151,15 +151,17 @@ export default function HeroSection() {
       </div>
 
       {/* Contact Form Modal */}
+
+      {/* Contact Form Modal */}
       {showContactForm && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
           <div className="max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             <div className="relative">
               <button
                 onClick={() => setShowContactForm(false)}
-                className="absolute -top-4 -right-4 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-colors z-10"
+                className="absolute -top-4 -right-4 bg-white dark:bg-espresso-800 rounded-full p-2 shadow-lg hover:bg-gray-100 dark:hover:bg-espresso-700 transition-colors z-10"
               >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-6 h-6 text-coffee-900 dark:text-coffee-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>

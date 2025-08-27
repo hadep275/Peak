@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import ThemeToggle from './ThemeToggle';
 
@@ -21,10 +22,14 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity">
-            <div className="w-8 h-8 bg-gradient-to-r from-coffee-600 to-chocolate-700 rounded-lg flex items-center justify-center shadow-sm">
-              <span className="text-white font-bold text-lg">P</span>
-            </div>
+          <Link href="/" className="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+            <Image
+              src="/Peak-logo.png"
+              alt="Peak Logo"
+              width={32}
+              height={32}
+              className="w-8 h-8 object-contain"
+            />
             <span className="text-xl font-bold text-coffee-900 dark:text-coffee-50">Peak</span>
           </Link>
 
@@ -44,12 +49,6 @@ export default function Navigation() {
               </Link>
             ))}
             <ThemeToggle />
-            <Link
-              href="/contact"
-              className="bg-coffee-600 hover:bg-coffee-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors duration-200 shadow-sm border border-coffee-600 hover:border-coffee-700"
-            >
-              Get Started
-            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -89,13 +88,7 @@ export default function Navigation() {
                   {link.name}
                 </Link>
               ))}
-              <Link
-                href="/contact"
-                onClick={() => setIsMenuOpen(false)}
-                className="bg-coffee-600 hover:bg-coffee-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center shadow-sm mt-2 border border-coffee-600 hover:border-coffee-700"
-              >
-                Get Started
-              </Link>
+
             </div>
           </div>
         )}
