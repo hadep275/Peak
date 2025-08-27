@@ -1,7 +1,7 @@
 'use client';
 
 import ContactForm from './ContactForm';
-import { PhoneIcon, EnvelopeIcon, MapPinIcon, ClockIcon } from '@heroicons/react/24/outline';
+import { EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/outline';
 
 export default function ContactSection() {
   const contactInfo = [

@@ -17,7 +17,7 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="bg-white/95 dark:bg-espresso-950/95 backdrop-blur-sm border-b border-coffee-200 dark:border-coffee-700 sticky top-0 z-50 shadow-sm dark:shadow-coffee-900/20">
+    <nav className="bg-white dark:bg-espresso-950 backdrop-blur-sm border-b border-coffee-200 dark:border-coffee-700 sticky top-0 z-50 shadow-sm dark:shadow-none">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -46,7 +46,7 @@ export default function Navigation() {
             <ThemeToggle />
             <Link
               href="/contact"
-              className="bg-coffee-600 dark:bg-coffee-500 text-white px-6 py-2 rounded-lg font-semibold hover:bg-coffee-700 dark:hover:bg-coffee-600 transition-colors duration-200 shadow-sm"
+              className="bg-coffee-600 hover:bg-coffee-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors duration-200 shadow-sm border border-coffee-600 hover:border-coffee-700"
             >
               Get Started
             </Link>
@@ -73,7 +73,7 @@ export default function Navigation() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-coffee-200 dark:border-coffee-700 bg-white/95 dark:bg-espresso-950/95 backdrop-blur-sm">
+          <div className="md:hidden py-4 border-t border-coffee-200 dark:border-coffee-700 bg-white dark:bg-espresso-950">
             <div className="flex flex-col space-y-4 px-2">
               {navLinks.map((link) => (
                 <Link
@@ -92,7 +92,7 @@ export default function Navigation() {
               <Link
                 href="/contact"
                 onClick={() => setIsMenuOpen(false)}
-                className="bg-coffee-600 dark:bg-coffee-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-coffee-700 dark:hover:bg-coffee-600 transition-colors text-center shadow-sm mt-2"
+                className="bg-coffee-600 hover:bg-coffee-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center shadow-sm mt-2 border border-coffee-600 hover:border-coffee-700"
               >
                 Get Started
               </Link>

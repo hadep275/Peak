@@ -11,7 +11,7 @@ export function exportNewsletterEmails() {
 
     // Create CSV content
     const csvHeader = 'Email,Date,Timestamp\n';
-    const csvContent = emails.map((entry: any) => {
+    const csvContent = emails.map((entry: { email: string; date: string; timestamp: number }) => {
       const date = new Date(entry.date).toLocaleDateString();
       return `${entry.email},${date},${entry.timestamp}`;
     }).join('\n');
