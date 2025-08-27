@@ -36,17 +36,47 @@ export default function ContactForm({
     });
   };
 
+  const validateForm = () => {
+    // Basic validation
+    if (!formData.name.trim()) {
+      setError('Name is required');
+      return false;
+    }
+    if (!formData.email.trim()) {
+      setError('Email is required');
+      return false;
+    }
+    if (!formData.email.includes('@')) {
+      setError('Please enter a valid email address');
+      return false;
+    }
+    if (formData.phone && !/^[\d\s\-\+\(\)]+$/.test(formData.phone)) {
+      setError('Please enter a valid phone number (numbers, spaces, dashes, parentheses only)');
+      return false;
+    }
+    if (!formData.message.trim()) {
+      setError('Message is required');
+      return false;
+    }
+    return true;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     setError('');
 
+    // Validate form first
+    if (!validateForm()) {
+      setIsSubmitting(false);
+      return;
+    }
+
     try {
       // Use environment variable for Formspree endpoint
       const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID;
-      if (!formspreeId) {
-        console.error('Environment variables:', process.env);
-        throw new Error('Formspree ID not configured. Please check your .env.local file.');
+      if (!formspreeId || formspreeId === 'your_formspree_id_here') {
+        throw new Error('Formspree ID not configured. Please add your real Formspree ID to .env.local file.');
       }
 
       const response = await fetch(`https://formspree.io/f/${formspreeId}`, {
@@ -141,7 +171,7 @@ export default function ContactForm({
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="name" className="block text-sm font-medium text-coffee-700 dark:text-coffee-200 mb-2">
               Full Name *
             </label>
             <input
@@ -151,13 +181,13 @@ export default function ContactForm({
               required
               value={formData.name}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full px-4 py-3 border border-coffee-300 dark:border-coffee-600 rounded-lg focus:ring-2 focus:ring-coffee-500 focus:border-coffee-500 bg-white dark:bg-espresso-800 text-coffee-900 dark:text-coffee-50"
               placeholder="John Smith"
             />
           </div>
 
           <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="email" className="block text-sm font-medium text-coffee-700 dark:text-coffee-200 mb-2">
               Email Address *
             </label>
             <input
@@ -167,7 +197,7 @@ export default function ContactForm({
               required
               value={formData.email}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full px-4 py-3 border border-coffee-300 dark:border-coffee-600 rounded-lg focus:ring-2 focus:ring-coffee-500 focus:border-coffee-500 bg-white dark:bg-espresso-800 text-coffee-900 dark:text-coffee-50"
               placeholder="john@company.com"
             />
           </div>
@@ -175,7 +205,7 @@ export default function ContactForm({
 
         <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+            <label htmlFor="company" className="block text-sm font-medium text-coffee-700 dark:text-coffee-200 mb-2">
               Company Name *
             </label>
             <input
@@ -185,14 +215,14 @@ export default function ContactForm({
               required
               value={formData.company}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full px-4 py-3 border border-coffee-300 dark:border-coffee-600 rounded-lg focus:ring-2 focus:ring-coffee-500 focus:border-coffee-500 bg-white dark:bg-espresso-800 text-coffee-900 dark:text-coffee-50"
               placeholder="Your Company"
             />
           </div>
 
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-              Phone Number
+            <label htmlFor="phone" className="block text-sm font-medium text-coffee-700 dark:text-coffee-200 mb-2">
+              Phone Number (Optional)
             </label>
             <input
               type="tel"
@@ -200,8 +230,10 @@ export default function ContactForm({
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              pattern="[\d\s\-\+\(\)]+"
+              className="w-full px-4 py-3 border border-coffee-300 dark:border-coffee-600 rounded-lg focus:ring-2 focus:ring-coffee-500 focus:border-coffee-500 bg-white dark:bg-espresso-800 text-coffee-900 dark:text-coffee-50"
               placeholder="+1 (555) 123-4567"
+              title="Please enter a valid phone number"
             />
           </div>
         </div>
@@ -251,8 +283,8 @@ export default function ContactForm({
         </div>
 
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-            Message
+          <label htmlFor="message" className="block text-sm font-medium text-coffee-700 dark:text-coffee-200 mb-2">
+            Message *
           </label>
           <textarea
             id="message"
@@ -260,7 +292,7 @@ export default function ContactForm({
             rows={4}
             value={formData.message}
             onChange={handleChange}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            className="w-full px-4 py-3 border border-coffee-300 dark:border-coffee-600 rounded-lg focus:ring-2 focus:ring-coffee-500 focus:border-coffee-500 bg-white dark:bg-espresso-800 text-coffee-900 dark:text-coffee-50"
             placeholder="Tell us about your specific needs and challenges..."
           />
         </div>

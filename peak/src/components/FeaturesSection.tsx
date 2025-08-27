@@ -27,7 +27,7 @@ export default function FeaturesSection() {
         "Customer service tools",
         "Role-based access control"
       ],
-      image: "https://via.placeholder.com/600x400/f4ede0/af6f3e?text=Admin+Panel"
+      image: "https://picsum.photos/600/400?random=1"
     },
     {
       icon: UserGroupIcon,
@@ -40,7 +40,7 @@ export default function FeaturesSection() {
         "Communication history and notes",
         "Loyalty program management"
       ],
-      image: "https://via.placeholder.com/600x400/f4ede0/af6f3e?text=CRM+System"
+      image: "https://picsum.photos/600/400?random=2"
     },
     {
       icon: BoltIcon,
@@ -53,7 +53,7 @@ export default function FeaturesSection() {
         "Trend analysis and reporting",
         "Custom KPI dashboards"
       ],
-      image: "https://via.placeholder.com/600x400/f4ede0/af6f3e?text=AI+Intelligence"
+      image: "https://picsum.photos/600/400?random=3"
     },
     {
       icon: ChartBarIcon,
@@ -66,7 +66,7 @@ export default function FeaturesSection() {
         "Supplier integration",
         "Demand forecasting"
       ],
-      image: "https://via.placeholder.com/600x400/f4ede0/af6f3e?text=Inventory+Management"
+      image: "https://picsum.photos/600/400?random=4"
     },
     {
       icon: EnvelopeIcon,
@@ -79,7 +79,7 @@ export default function FeaturesSection() {
         "A/B testing capabilities",
         "Advanced segmentation"
       ],
-      image: "https://via.placeholder.com/600x400/f4ede0/af6f3e?text=Email+Marketing"
+      image: "https://picsum.photos/600/400?random=5"
     },
     {
       icon: TruckIcon,
@@ -92,7 +92,7 @@ export default function FeaturesSection() {
         "Tracking and notifications",
         "Returns management"
       ],
-      image: "https://via.placeholder.com/600x400/f4ede0/af6f3e?text=Shipping+Management"
+      image: "https://picsum.photos/600/400?random=6"
     },
     {
       icon: CurrencyDollarIcon,
@@ -105,7 +105,7 @@ export default function FeaturesSection() {
         "Tax reporting tools",
         "Financial forecasting"
       ],
-      image: "https://via.placeholder.com/600x400/f4ede0/af6f3e?text=Financial+Dashboard"
+      image: "https://picsum.photos/600/400?random=7"
     },
     {
       icon: ShieldCheckIcon,
@@ -118,7 +118,7 @@ export default function FeaturesSection() {
         "Data backup and recovery",
         "GDPR compliance tools"
       ],
-      image: "https://via.placeholder.com/600x400/f4ede0/af6f3e?text=Security+%26+Compliance"
+      image: "https://picsum.photos/600/400?random=8"
     }
   ];
 
