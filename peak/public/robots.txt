@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://luminacommerce.com/sitemap.xml
+Sitemap: https://peak-0.web.app/sitemap.xml
