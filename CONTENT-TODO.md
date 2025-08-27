@@ -111,12 +111,6 @@
 
 ### Google Analytics Setup
 
-- [ ] **Create GA4 Property**
-
-  - [ ] Go to https://analytics.google.com/
-  - [ ] Create new property for Peak
-  - [ ] Get measurement ID (starts with G-)
-  - [ ] Add to `.env.local` file
 
 - [ ] **Conversion Tracking**
   - [ ] Set up goals for form submissions

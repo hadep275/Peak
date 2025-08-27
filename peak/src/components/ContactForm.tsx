@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { CheckIcon, ExclamationTriangleIcon } from '@heroicons/react/24/outline';
 
 interface ContactFormProps {
@@ -9,10 +9,10 @@ interface ContactFormProps {
   description?: string;
 }
 
-export default function ContactForm({ 
-  formType = 'demo', 
+export default function ContactForm({
+  formType = 'demo',
   title,
-  description 
+  description
 }: ContactFormProps) {
   const [formData, setFormData] = useState({
     name: '',
@@ -24,6 +24,14 @@ export default function ContactForm({
     message: '',
     formType: formType
   });
+
+  // Debug: Log environment variables on component mount
+  React.useEffect(() => {
+    console.log('Environment check:');
+    console.log('NODE_ENV:', process.env.NODE_ENV);
+    console.log('FORMSPREE_ID:', process.env.NEXT_PUBLIC_FORMSPREE_ID);
+    console.log('All env vars:', Object.keys(process.env).filter(key => key.startsWith('NEXT_PUBLIC')));
+  }, []);
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -75,17 +83,26 @@ export default function ContactForm({
     try {
       // Use environment variable for Formspree endpoint
       const formspreeId = process.env.NEXT_PUBLIC_FORMSPREE_ID;
+      console.log('Formspree ID:', formspreeId);
+
       if (!formspreeId || formspreeId === 'your_formspree_id_here') {
         throw new Error('Formspree ID not configured. Please add your real Formspree ID to .env.local file.');
       }
 
-      const response = await fetch(`https://formspree.io/f/${formspreeId}`, {
+      const formspreeUrl = `https://formspree.io/f/${formspreeId}`;
+      console.log('Submitting to:', formspreeUrl);
+      console.log('Form data:', formData);
+
+      const response = await fetch(formspreeUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
       });
+
+      console.log('Response status:', response.status);
+      console.log('Response ok:', response.ok);
 
       if (response.ok) {
         setIsSubmitted(true);
