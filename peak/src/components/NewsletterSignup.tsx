@@ -98,7 +98,7 @@ export default function NewsletterSignup() {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email address"
             required
-            className="w-full px-4 py-3 border border-coffee-300 dark:border-coffee-600 rounded-lg focus:ring-2 focus:ring-coffee-500 focus:border-transparent bg-white dark:bg-coffee-800 text-coffee-900 dark:text-coffee-50 placeholder-coffee-500 dark:placeholder-coffee-400"
+            className="w-full px-4 py-3 border border-coffee-300 dark:border-coffee-600 rounded-lg focus:ring-2 focus:ring-coffee-500 focus:border-transparent bg-white dark:bg-coffee-800 text-coffee-900 dark:text-coffee-50 placeholder-coffee-700 dark:placeholder-coffee-400"
           />
         </div>
         

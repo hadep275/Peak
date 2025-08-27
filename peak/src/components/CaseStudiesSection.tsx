@@ -146,7 +146,7 @@ export default function CaseStudiesSection() {
                         &ldquo;{study.testimonial.quote}&rdquo;
                       </blockquote>
                       <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 bg-coffee-600 rounded-full flex items-center justify-center overflow-hidden">
+                        <div className="w-10 h-10 bg-transparent border-2 border-coffee-600 dark:border-coffee-400 rounded-full flex items-center justify-center overflow-hidden">
                           {study.company === "Lumina Skincare" ? (
                             <img
                               src="/assets/casestudy/Lumina.png"
@@ -154,7 +154,7 @@ export default function CaseStudiesSection() {
                               className="w-full h-full object-contain p-1"
                             />
                           ) : (
-                            <span className="text-white font-semibold text-sm">
+                            <span className="text-coffee-600 dark:text-coffee-400 font-semibold text-sm">
                               {study.testimonial.author.split(' ').map(n => n[0]).join('')}
                             </span>
                           )}
@@ -197,11 +197,11 @@ export default function CaseStudiesSection() {
 
         {/* CTA */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-coffee-600 to-chocolate-700 rounded-2xl p-8 text-white shadow-xl">
-            <h3 className="text-2xl font-bold mb-4">
+          <div className="rounded-2xl p-8 shadow-xl" style={{ background: 'linear-gradient(to right, #af6f3e, #87543f)' }}>
+            <h3 className="text-2xl font-bold mb-4" style={{ color: 'white' }}>
               Ready to Write Your Success Story?
             </h3>
-            <p className="text-coffee-100 mb-6 max-w-2xl mx-auto">
+            <p className="mb-6 max-w-2xl mx-auto" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
               Join these successful businesses and see what Peak can do for your growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -217,7 +217,8 @@ export default function CaseStudiesSection() {
                   // Later you can replace with actual PDF download
                   document.querySelector('#contact-form')?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-coffee-600 transition-colors"
+                className="border border-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-coffee-600 transition-colors"
+                style={{ color: 'white', borderColor: 'white' }}
               >
                 Download Case Study
               </button>

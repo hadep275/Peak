@@ -105,9 +105,9 @@ export default function ComparisonSection() {
         </div>
 
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-coffee-600 to-chocolate-700 text-white rounded-2xl p-8 shadow-xl">
-            <h3 className="text-2xl font-bold mb-4">Ready to Make the Switch?</h3>
-            <p className="text-coffee-100 mb-6 max-w-2xl mx-auto">
+          <div className="rounded-2xl p-8 shadow-xl" style={{ background: 'linear-gradient(to right, #af6f3e, #87543f)' }}>
+            <h3 className="text-2xl font-bold mb-4" style={{ color: 'white' }}>Ready to Make the Switch?</h3>
+            <p className="mb-6 max-w-2xl mx-auto" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
               Join hundreds of businesses that have already made the smart choice.
             </p>
             <button

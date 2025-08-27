@@ -35,10 +35,10 @@ export default function ContactSection() {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h3>
-              <p className="text-gray-600 mb-8">
-                Our team of e-commerce experts is here to help you find the perfect solution for your business. 
-                Whether you need a demo, have questions about pricing, or want to discuss a custom implementation, 
+              <h3 className="text-2xl font-bold text-coffee-900 dark:text-coffee-50 mb-6">Get in Touch</h3>
+              <p className="text-coffee-600 dark:text-coffee-200 mb-8">
+                Our team of e-commerce experts is here to help you find the perfect solution for your business.
+                Whether you need a demo, have questions about pricing, or want to discuss a custom implementation,
                 we&apos;re here to help.
               </p>
             </div>
@@ -93,7 +93,7 @@ export default function ContactSection() {
                 and delivered exactly what we were looking for.&rdquo;
               </blockquote>
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-coffee-600 rounded-full flex items-center justify-center shadow-md overflow-hidden">
+                <div className="w-10 h-10 bg-transparent border-2 border-coffee-600 dark:border-coffee-400 rounded-full flex items-center justify-center shadow-md overflow-hidden">
                   <img
                     src="/assets/casestudy/Lumina.png"
                     alt="Lumina Logo"

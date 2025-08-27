@@ -198,7 +198,7 @@ export default function FeaturesSection() {
               </div>
 
               <button className="mt-8 bg-coffee-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-coffee-700 transition-colors">
-                Learn More
+                See How It Works
               </button>
             </div>
 
@@ -218,11 +218,11 @@ export default function FeaturesSection() {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-coffee-600 to-chocolate-700 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">
+          <div className="rounded-2xl p-8 text-white" style={{ background: 'linear-gradient(to right, #af6f3e, #87543f)' }}>
+            <h3 className="text-2xl font-bold mb-4" style={{ color: 'white' }}>
               Ready to See These Features in Action?
             </h3>
-            <p className="text-coffee-100 mb-6 max-w-2xl mx-auto">
+            <p className="mb-6 max-w-2xl mx-auto" style={{ color: 'rgba(255, 255, 255, 0.9)' }}>
               Book a personalized demo and see how Peak can transform your business operations.
             </p>
             <button

@@ -10,21 +10,27 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-background">
-      {/* Hero Section with Logo */}
+    <main className="min-h-screen relative">
+      {/* Hero Section with Integrated Background Logo */}
       <section className="relative bg-gradient-to-br from-coffee-50 to-chocolate-50 dark:from-espresso-950 dark:to-coffee-950 py-20 md:py-32 overflow-hidden">
-        {/* Background Logo - Larger and positioned to start at text level */}
-        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 opacity-5 dark:opacity-10" style={{ top: '5rem' }}>
+        {/* Background Logo - Integrated into the background, positioned behind text */}
+        <div className="absolute inset-0 flex items-start justify-center" style={{ paddingTop: '4rem' }}>
           <Image
             src="/Peak-logo.png"
             alt="Peak Logo Background"
             width={2000}
             height={2000}
-            className="w-[1000px] h-[1000px] md:w-[1400px] md:h-[1400px] lg:w-[1800px] lg:h-[1800px] xl:w-[2200px] xl:h-[2200px] object-contain"
+            className="object-contain opacity-30 dark:opacity-40"
+            style={{
+              width: '150vw',
+              height: '150vh',
+              minWidth: '1200px',
+              minHeight: '1200px'
+            }}
           />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-coffee-900 dark:text-coffee-50 mb-8">
             About Peak
           </h1>
@@ -38,7 +44,7 @@ export default function AboutPage() {
       </section>
 
       {/* Mission Section */}
-      <section className="py-20">
+      <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-coffee-900 dark:text-coffee-50 mb-6">
@@ -109,7 +115,7 @@ export default function AboutPage() {
       </section>
 
       {/* Story Section */}
-      <section className="py-20">
+      <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>

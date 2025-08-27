@@ -23,6 +23,19 @@ body {
   font-family: var(--font-sans), system-ui, sans-serif;
 }
 
+/* Force consistent light mode backgrounds */
+.bg-gray-50 {
+  background-color: #faf7f2 !important;
+}
+
+.bg-gray-100 {
+  background-color: #f4ede0 !important;
+}
+
+.bg-gray-200 {
+  background-color: #e8d7c0 !important;
+}
+
 /* Force consistent dark mode backgrounds */
 .dark .bg-white {
   background-color: #28201c !important;
@@ -40,7 +53,24 @@ body {
   background-color: #71574a !important;
 }
 
-/* Force consistent text colors */
+/* Force consistent text colors for light mode */
+.text-gray-900 {
+  color: #331f15 !important;
+}
+
+.text-gray-800 {
+  color: #331f15 !important;
+}
+
+.text-gray-700 {
+  color: #603c2a !important;
+}
+
+.text-gray-600 {
+  color: #925735 !important;
+}
+
+/* Force consistent text colors for dark mode */
 .dark .text-gray-900 {
   color: #f4ede0 !important;
 }
@@ -55,6 +85,45 @@ body {
 
 .dark .text-gray-600 {
   color: #d9bc96 !important;
+}
+
+/* Ensure white text is visible on light backgrounds */
+.text-white {
+  color: white !important;
+}
+
+/* Force white text on gradient backgrounds */
+.bg-gradient-to-r .text-white,
+.bg-gradient-to-r h1,
+.bg-gradient-to-r h2,
+.bg-gradient-to-r h3,
+.bg-gradient-to-r h4,
+.bg-gradient-to-r h5,
+.bg-gradient-to-r h6 {
+  color: white !important;
+}
+
+/* Force white text with opacity on gradient backgrounds */
+.bg-gradient-to-r p {
+  color: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Ensure proper contrast for buttons and CTAs */
+.bg-coffee-600 {
+  background-color: #af6f3e !important;
+}
+
+.bg-coffee-700 {
+  background-color: #925735 !important;
+}
+
+/* Fix placeholder text visibility */
+.placeholder-coffee-700::placeholder {
+  color: #925735 !important;
+}
+
+.dark .placeholder-coffee-400::placeholder {
+  color: #c89d6a !important;
 }
 
 /* Replace all blue colors with coffee colors */
