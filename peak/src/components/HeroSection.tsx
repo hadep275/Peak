@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { ChevronRightIcon, ShieldCheckIcon, StarIcon } from '@heroicons/react/24/solid';
 import { PlayIcon } from '@heroicons/react/24/outline';
 import ContactForm from './ContactForm';
-import ThemeToggle from './ThemeToggle';
+
 
 export default function HeroSection() {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
@@ -19,38 +19,7 @@ export default function HeroSection() {
         <div className="absolute -bottom-8 left-20 w-48 h-48 md:w-72 md:h-72 bg-espresso-300 dark:bg-espresso-800 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000"></div>
       </div>
       
-      {/* Navigation */}
-      <nav className="relative z-10 px-4 py-4 lg:px-8">
-        <div className="flex items-center justify-between max-w-7xl mx-auto">
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 elegant-gradient rounded-lg flex items-center justify-center shadow-lg">
-              <span className="text-white font-bold text-sm">P</span>
-            </div>
-            <span className="text-xl font-bold text-foreground">Peak</span>
-          </div>
 
-          <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
-            <a href="#features" className="text-coffee-600 dark:text-coffee-200 hover:text-coffee-800 dark:hover:text-coffee-100 transition-all duration-200 font-medium">Features</a>
-            <a href="#pricing" className="text-coffee-600 dark:text-coffee-200 hover:text-coffee-800 dark:hover:text-coffee-100 transition-all duration-200 font-medium">Pricing</a>
-            <a href="#comparison" className="text-coffee-600 dark:text-coffee-200 hover:text-coffee-800 dark:hover:text-coffee-100 transition-all duration-200 font-medium">Compare</a>
-            <a href="#case-studies" className="text-coffee-600 dark:text-coffee-200 hover:text-coffee-800 dark:hover:text-coffee-100 transition-all duration-200 font-medium">Case Studies</a>
-            <ThemeToggle />
-            <button className="elegant-button">
-              Book Demo
-            </button>
-          </div>
-
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center space-x-4">
-            <ThemeToggle />
-            <button className="text-coffee-600 dark:text-coffee-200">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
-        </div>
-      </nav>
 
       {/* Hero Content */}
       <div className="relative z-10 px-4 py-12 lg:px-8 lg:py-24">
