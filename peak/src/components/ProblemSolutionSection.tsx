@@ -93,13 +93,13 @@ export default function ProblemSolutionSection() {
               <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
                 <CheckIcon className="w-5 h-5 text-green-600" />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">Peak Solution</h3>
+              <h3 className="text-2xl font-bold text-coffee-900 dark:text-coffee-50">Peak Solution</h3>
             </div>
 
             {solutions.map((solution, index) => (
-              <div key={index} className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-green-100 dark:border-green-800 shadow-sm">
-                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">{solution.title}</h4>
-                <p className="text-gray-600 dark:text-gray-300 mb-3">{solution.description}</p>
+              <div key={index} className="bg-white dark:bg-espresso-800 rounded-xl p-6 border border-green-100 dark:border-green-800 shadow-sm">
+                <h4 className="text-lg font-semibold text-coffee-900 dark:text-coffee-50 mb-2">{solution.title}</h4>
+                <p className="text-coffee-600 dark:text-coffee-200 mb-3">{solution.description}</p>
                 <p className="text-sm text-green-600 dark:text-green-400 bg-green-50 dark:bg-green-900/20 px-3 py-2 rounded-lg">
                   {solution.benefit}
                 </p>

@@ -53,13 +53,13 @@ export default function CaseStudiesSection() {
   ];
 
   return (
-    <section id="case-studies" className="py-20 bg-gray-50">
+    <section id="case-studies" className="py-20 bg-coffee-50 dark:bg-espresso-950">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl lg:text-4xl font-bold text-coffee-900 dark:text-coffee-50 mb-4">
             Real Results from Real Businesses
           </h2>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-coffee-600 dark:text-coffee-200 max-w-3xl mx-auto">
             See how businesses like yours have transformed their operations and accelerated growth with Peak.
           </p>
         </div>
@@ -69,12 +69,12 @@ export default function CaseStudiesSection() {
           {metrics.map((metric, index) => {
             const IconComponent = metric.icon;
             return (
-              <div key={index} className="bg-white rounded-xl p-6 text-center shadow-sm">
+              <div key={index} className="bg-white dark:bg-espresso-900 rounded-xl p-6 text-center shadow-sm border border-coffee-200 dark:border-coffee-700">
                 <div className="w-12 h-12 bg-coffee-100 dark:bg-coffee-800 rounded-lg flex items-center justify-center mx-auto mb-4">
                   <IconComponent className="w-6 h-6 text-coffee-600 dark:text-coffee-400" />
                 </div>
-                <div className="text-3xl font-bold text-gray-900 mb-2">{metric.value}</div>
-                <div className="text-gray-600">{metric.label}</div>
+                <div className="text-3xl font-bold text-coffee-900 dark:text-coffee-50 mb-2">{metric.value}</div>
+                <div className="text-coffee-600 dark:text-coffee-200">{metric.label}</div>
               </div>
             );
           })}
@@ -83,12 +83,12 @@ export default function CaseStudiesSection() {
         {/* Case Studies */}
         <div className="space-y-16">
           {caseStudies.map((study, index) => (
-            <div key={index} className="bg-white rounded-2xl shadow-lg overflow-hidden">
+            <div key={index} className="bg-white dark:bg-espresso-900 rounded-2xl shadow-lg overflow-hidden border border-coffee-200 dark:border-coffee-700">
               <div className="grid lg:grid-cols-2 gap-8">
                 {/* Content */}
                 <div className="p-8 lg:p-12">
                   <div className="flex items-center space-x-4 mb-6">
-                    <div className="w-12 h-12 bg-white rounded-lg flex items-center justify-center p-2">
+                    <div className="w-12 h-12 bg-coffee-50 dark:bg-coffee-800 rounded-lg flex items-center justify-center p-2 border border-coffee-200 dark:border-coffee-600">
                       {study.company === "Lumina Skincare" ? (
                         <img
                           src="/assets/casestudy/Lumina.png"
@@ -96,7 +96,7 @@ export default function CaseStudiesSection() {
                           className="w-full h-full object-contain"
                         />
                       ) : (
-                        <span className="text-coffee-600 font-bold text-lg">{study.company.charAt(0)}</span>
+                        <span className="text-coffee-600 dark:text-coffee-400 font-bold text-lg">{study.company.charAt(0)}</span>
                       )}
                     </div>
                     <div>
@@ -105,36 +105,37 @@ export default function CaseStudiesSection() {
                           href="https://luminaco.skin"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-xl font-bold text-gray-900 dark:text-coffee-50 hover:text-coffee-600 dark:hover:text-coffee-400 transition-colors"
+                          className="text-xl font-bold text-coffee-900 dark:text-coffee-50 hover:text-coffee-600 dark:hover:text-coffee-400 transition-colors inline-flex items-center space-x-1"
                         >
-                          {study.company} ↗
+                          <span>{study.company}</span>
+                          <span className="text-coffee-600 dark:text-coffee-400 hover:text-coffee-700 dark:hover:text-coffee-300 transition-colors">↗</span>
                         </a>
                       ) : (
-                        <h3 className="text-xl font-bold text-gray-900 dark:text-coffee-50">{study.company}</h3>
+                        <h3 className="text-xl font-bold text-coffee-900 dark:text-coffee-50">{study.company}</h3>
                       )}
-                      <p className="text-gray-600 dark:text-coffee-200">{study.industry} • {study.size}</p>
+                      <p className="text-coffee-600 dark:text-coffee-200">{study.industry} • {study.size}</p>
                     </div>
                   </div>
 
                   <div className="space-y-6">
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Challenge</h4>
-                      <p className="text-gray-600">{study.challenge}</p>
+                      <h4 className="font-semibold text-coffee-900 dark:text-coffee-50 mb-2">Challenge</h4>
+                      <p className="text-coffee-600 dark:text-coffee-200">{study.challenge}</p>
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-2">Solution</h4>
-                      <p className="text-gray-600">{study.solution}</p>
+                      <h4 className="font-semibold text-coffee-900 dark:text-coffee-50 mb-2">Solution</h4>
+                      <p className="text-coffee-600 dark:text-coffee-200">{study.solution}</p>
                     </div>
 
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-4">Results</h4>
+                      <h4 className="font-semibold text-coffee-900 dark:text-coffee-50 mb-4">Results</h4>
                       <div className="grid sm:grid-cols-2 gap-4">
                         {study.results.map((result, resultIndex) => (
-                          <div key={resultIndex} className="bg-gray-50 rounded-lg p-4">
+                          <div key={resultIndex} className="bg-coffee-50 dark:bg-coffee-800 rounded-lg p-4 border border-coffee-200 dark:border-coffee-600">
                             <div className="text-2xl font-bold text-coffee-600 dark:text-coffee-400">{result.value}</div>
-                            <div className="text-sm font-medium text-gray-900">{result.metric}</div>
-                            <div className="text-xs text-gray-600">{result.period}</div>
+                            <div className="text-sm font-medium text-coffee-900 dark:text-coffee-50">{result.metric}</div>
+                            <div className="text-xs text-coffee-600 dark:text-coffee-300">{result.period}</div>
                           </div>
                         ))}
                       </div>
@@ -142,16 +143,24 @@ export default function CaseStudiesSection() {
 
                     <div className="bg-coffee-50 dark:bg-coffee-900/20 rounded-lg p-6 border border-coffee-200 dark:border-coffee-700">
                       <blockquote className="text-coffee-700 dark:text-coffee-200 italic mb-4">
-                        "                        &ldquo;{study.testimonial.quote}&rdquo;"
+                        &ldquo;{study.testimonial.quote}&rdquo;
                       </blockquote>
                       <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 bg-coffee-600 rounded-full flex items-center justify-center">
-                          <span className="text-white font-semibold text-sm">
-                            {study.testimonial.author.split(' ').map(n => n[0]).join('')}
-                          </span>
+                        <div className="w-10 h-10 bg-coffee-600 rounded-full flex items-center justify-center overflow-hidden">
+                          {study.company === "Lumina Skincare" ? (
+                            <img
+                              src="/assets/casestudy/Lumina.png"
+                              alt="Lumina Logo"
+                              className="w-full h-full object-contain p-1"
+                            />
+                          ) : (
+                            <span className="text-white font-semibold text-sm">
+                              {study.testimonial.author.split(' ').map(n => n[0]).join('')}
+                            </span>
+                          )}
                         </div>
                         <div>
-                          <div className="font-semibold text-foreground">{study.testimonial.author}</div>
+                          <div className="font-semibold text-coffee-900 dark:text-coffee-50">{study.testimonial.author}</div>
                           <div className="text-sm text-coffee-600 dark:text-coffee-300">{study.testimonial.title}</div>
                         </div>
                       </div>
@@ -161,14 +170,24 @@ export default function CaseStudiesSection() {
 
                 {/* Dashboard Preview */}
                 <div className="p-8 lg:p-12 flex items-center">
-                  <div className="w-full bg-gradient-to-br from-coffee-100 to-chocolate-100 dark:from-coffee-900 dark:to-chocolate-900 rounded-xl shadow-lg p-8 min-h-[300px] flex items-center justify-center">
-                    <div className="text-center">
-                      <div className="w-16 h-16 bg-coffee-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                        <span className="text-white font-bold text-xl">{study.company.charAt(0)}</span>
+                  <div className="w-full bg-gradient-to-br from-coffee-100 to-chocolate-100 dark:from-coffee-900 dark:to-chocolate-900 rounded-xl shadow-lg overflow-hidden">
+                    {study.company === "Lumina Skincare" ? (
+                      <img
+                        src="/assets/casestudy/Lumina dashboard.png"
+                        alt="Lumina Dashboard Preview"
+                        className="w-full h-auto object-cover"
+                      />
+                    ) : (
+                      <div className="p-8 min-h-[300px] flex items-center justify-center">
+                        <div className="text-center">
+                          <div className="w-16 h-16 bg-coffee-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                            <span className="text-white font-bold text-xl">{study.company.charAt(0)}</span>
+                          </div>
+                          <p className="text-coffee-700 dark:text-coffee-200 font-medium">Dashboard Preview</p>
+                          <p className="text-coffee-600 dark:text-coffee-300 text-sm mt-2">{study.company} Analytics</p>
+                        </div>
                       </div>
-                      <p className="text-coffee-700 dark:text-coffee-200 font-medium">Dashboard Preview</p>
-                      <p className="text-coffee-600 dark:text-coffee-300 text-sm mt-2">{study.company} Analytics</p>
-                    </div>
+                    )}
                   </div>
                 </div>
               </div>

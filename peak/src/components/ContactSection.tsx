@@ -89,12 +89,16 @@ export default function ContactSection() {
             {/* Testimonial */}
             <div className="bg-background rounded-xl p-6 border-l-4 border-coffee-600 shadow-sm">
               <blockquote className="text-coffee-700 dark:text-coffee-200 italic mb-4">
-                "                &ldquo;The Peak team was incredibly helpful throughout our migration. They understood our needs
-                and delivered exactly what we were looking for.&rdquo;"
+                &ldquo;The Peak team was incredibly helpful throughout our migration. They understood our needs
+                and delivered exactly what we were looking for.&rdquo;
               </blockquote>
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-coffee-600 rounded-full flex items-center justify-center shadow-md">
-                  <span className="text-white font-semibold text-sm">LR</span>
+                <div className="w-10 h-10 bg-coffee-600 rounded-full flex items-center justify-center shadow-md overflow-hidden">
+                  <img
+                    src="/assets/casestudy/Lumina.png"
+                    alt="Lumina Logo"
+                    className="w-full h-full object-contain p-1"
+                  />
                 </div>
                 <div>
                   <div className="font-semibold text-foreground">Luma Rae</div>

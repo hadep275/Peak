@@ -38,6 +38,7 @@ export default function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
+                prefetch={true}
                 className={`font-medium transition-colors duration-200 ${
                   pathname === link.href
                     ? 'text-coffee-600 dark:text-coffee-300 border-b-2 border-coffee-600 dark:border-coffee-300 pb-1'
@@ -50,6 +51,7 @@ export default function Navigation() {
             <ThemeToggle />
             <Link
               href="/contact"
+              prefetch={true}
               className="bg-coffee-600 hover:bg-coffee-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors duration-200 shadow-sm border border-coffee-600 hover:border-coffee-700"
             >
               Get Started
@@ -83,6 +85,7 @@ export default function Navigation() {
                 <Link
                   key={link.href}
                   href={link.href}
+                  prefetch={true}
                   onClick={() => setIsMenuOpen(false)}
                   className={`font-medium transition-colors duration-200 py-2 px-3 rounded-lg ${
                     pathname === link.href
@@ -95,6 +98,7 @@ export default function Navigation() {
               ))}
               <Link
                 href="/contact"
+                prefetch={true}
                 onClick={() => setIsMenuOpen(false)}
                 className="bg-coffee-600 hover:bg-coffee-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors text-center shadow-sm mt-2 border border-coffee-600 hover:border-coffee-700"
               >

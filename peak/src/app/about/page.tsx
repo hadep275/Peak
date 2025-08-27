@@ -13,14 +13,14 @@ export default function AboutPage() {
     <main className="min-h-screen bg-background">
       {/* Hero Section with Logo */}
       <section className="relative bg-gradient-to-br from-coffee-50 to-chocolate-50 dark:from-espresso-950 dark:to-coffee-950 py-20 md:py-32 overflow-hidden">
-        {/* Background Logo */}
-        <div className="absolute inset-0 flex items-center justify-center opacity-5 dark:opacity-10">
+        {/* Background Logo - Larger and positioned to start at text level */}
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 opacity-5 dark:opacity-10" style={{ top: '5rem' }}>
           <Image
             src="/Peak-logo.png"
             alt="Peak Logo Background"
-            width={1200}
-            height={1200}
-            className="w-[600px] h-[600px] md:w-[800px] md:h-[800px] lg:w-[1000px] lg:h-[1000px] object-contain"
+            width={2000}
+            height={2000}
+            className="w-[1000px] h-[1000px] md:w-[1400px] md:h-[1400px] lg:w-[1800px] lg:h-[1800px] xl:w-[2200px] xl:h-[2200px] object-contain"
           />
         </div>
 
