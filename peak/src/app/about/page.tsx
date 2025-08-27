@@ -14,18 +14,18 @@ export default function AboutPage() {
       {/* Hero Section with Integrated Background Logo */}
       <section className="relative bg-gradient-to-br from-coffee-50 to-chocolate-50 dark:from-espresso-950 dark:to-coffee-950 py-20 md:py-32 overflow-hidden">
         {/* Background Logo - Integrated into the background, positioned behind text */}
-        <div className="absolute inset-0 flex items-start justify-center" style={{ paddingTop: '4rem' }}>
+        <div className="absolute inset-0 flex items-center justify-center">
           <Image
             src="/Peak-logo.png"
             alt="Peak Logo Background"
-            width={2000}
-            height={2000}
-            className="object-contain opacity-30 dark:opacity-40"
+            width={1200}
+            height={1200}
+            className="object-contain opacity-50 dark:opacity-60"
             style={{
-              width: '150vw',
-              height: '150vh',
-              minWidth: '1200px',
-              minHeight: '1200px'
+              width: '120vw',
+              height: '120vh',
+              minWidth: '800px',
+              minHeight: '800px'
             }}
           />
         </div>
