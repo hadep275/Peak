@@ -1,6 +1,6 @@
 'use client';
 
-import { EnvelopeIcon, PhoneIcon, MapPinIcon } from '@heroicons/react/24/outline';
+import { EnvelopeIcon, MapPinIcon } from '@heroicons/react/24/outline';
 
 export default function Footer() {
   const footerLinks = {
@@ -56,15 +56,11 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <EnvelopeIcon className="w-5 h-5 text-coffee-400" />
-                <span className="text-coffee-200">hello@peak.com</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <PhoneIcon className="w-5 h-5 text-coffee-400" />
-                <span className="text-coffee-200">1-800-PEAK-123</span>
+                <span className="text-coffee-200">Contact via form only</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPinIcon className="w-5 h-5 text-coffee-400" />
-                <span className="text-coffee-200">San Francisco, CA</span>
+                <span className="text-coffee-200">Calgary, AB, Canada</span>
               </div>
             </div>
           </div>

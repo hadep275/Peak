@@ -6,21 +6,15 @@ import { PhoneIcon, EnvelopeIcon, MapPinIcon, ClockIcon } from '@heroicons/react
 export default function ContactSection() {
   const contactInfo = [
     {
-      icon: PhoneIcon,
-      title: "Phone",
-      details: "1-800-PEAK-123",
-      subtext: "Mon-Fri 9AM-6PM PST"
-    },
-    {
       icon: EnvelopeIcon,
-      title: "Email",
-      details: "hello@peak.com",
+      title: "Contact Method",
+      details: "Contact Form Only",
       subtext: "We respond within 24 hours"
     },
     {
       icon: MapPinIcon,
-      title: "Office",
-      details: "San Francisco, CA",
+      title: "Location",
+      details: "Calgary, AB, Canada",
       subtext: "Remote-first company"
     },
     {
@@ -117,8 +111,8 @@ export default function ContactSection() {
           </div>
 
           {/* Contact Form */}
-          <div>
-            <ContactForm 
+          <div id="contact-form">
+            <ContactForm
               formType="contact"
               title="Let's Talk"
               description="Fill out the form below and we'll get back to you within 24 hours."
@@ -135,21 +129,14 @@ export default function ContactSection() {
             <p className="text-coffee-100 mb-6 max-w-2xl mx-auto">
               Schedule a call with our team to discuss your specific needs and get answers to all your questions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="tel:1-800-PEAK-123"
+            <div className="flex justify-center">
+              <button
+                onClick={() => document.querySelector('#contact-form')?.scrollIntoView({ behavior: 'smooth' })}
                 className="bg-white text-coffee-600 px-8 py-3 rounded-lg font-semibold hover:bg-coffee-50 transition-colors inline-flex items-center justify-center space-x-2 shadow-md"
               >
-                <PhoneIcon className="w-5 h-5" />
-                <span>Call Now</span>
-              </a>
-              <a
-                href="mailto:hello@peak.com"
-                className="border border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-coffee-600 transition-colors inline-flex items-center justify-center space-x-2"
-              >
                 <EnvelopeIcon className="w-5 h-5" />
-                <span>Send Email</span>
-              </a>
+                <span>Use Contact Form</span>
+              </button>
             </div>
           </div>
         </div>

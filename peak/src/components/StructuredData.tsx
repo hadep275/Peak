@@ -14,9 +14,9 @@ export default function StructuredData() {
     },
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "San Francisco",
-      "addressRegion": "CA",
-      "addressCountry": "US"
+      "addressLocality": "Calgary",
+      "addressRegion": "AB",
+      "addressCountry": "CA"
     },
     "sameAs": [
       "https://twitter.com/luminacommerce",
