@@ -27,7 +27,7 @@ export default function FeaturesSection() {
         "Customer service tools",
         "Role-based access control"
       ],
-      image: "https://picsum.photos/600/400?random=1"
+      image: "/assets/scale/Admin.png"
     },
     {
       icon: UserGroupIcon,
@@ -40,7 +40,7 @@ export default function FeaturesSection() {
         "Communication history and notes",
         "Loyalty program management"
       ],
-      image: "https://picsum.photos/600/400?random=2"
+      image: "/assets/scale/CRM.png"
     },
     {
       icon: BoltIcon,
@@ -53,7 +53,7 @@ export default function FeaturesSection() {
         "Trend analysis and reporting",
         "Custom KPI dashboards"
       ],
-      image: "https://picsum.photos/600/400?random=3"
+      image: "/assets/scale/Pulse.png"
     },
     {
       icon: ChartBarIcon,
@@ -66,7 +66,7 @@ export default function FeaturesSection() {
         "Supplier integration",
         "Demand forecasting"
       ],
-      image: "https://picsum.photos/600/400?random=4"
+      image: "/assets/scale/Inventory.png"
     },
     {
       icon: EnvelopeIcon,
@@ -79,7 +79,7 @@ export default function FeaturesSection() {
         "A/B testing capabilities",
         "Advanced segmentation"
       ],
-      image: "https://picsum.photos/600/400?random=5"
+      image: "/assets/scale/Email.png"
     },
     {
       icon: TruckIcon,
@@ -92,7 +92,7 @@ export default function FeaturesSection() {
         "Tracking and notifications",
         "Returns management"
       ],
-      image: "https://picsum.photos/600/400?random=6"
+      image: "/assets/scale/Shipping.png"
     },
     {
       icon: CurrencyDollarIcon,
@@ -105,7 +105,7 @@ export default function FeaturesSection() {
         "Tax reporting tools",
         "Financial forecasting"
       ],
-      image: "https://picsum.photos/600/400?random=7"
+      image: "/assets/scale/Financial.png"
     },
     {
       icon: ShieldCheckIcon,
@@ -118,7 +118,7 @@ export default function FeaturesSection() {
         "Data backup and recovery",
         "GDPR compliance tools"
       ],
-      image: "https://picsum.photos/600/400?random=8"
+      image: "/assets/scale/Security.png"
     }
   ];
 
@@ -204,7 +204,7 @@ export default function FeaturesSection() {
 
             {/* Image */}
             <div className="p-8 lg:p-12 flex items-center">
-              <div className="w-full bg-white dark:bg-espresso-800 rounded-xl shadow-lg overflow-hidden">
+              <div className="w-full bg-white dark:bg-espresso-800 rounded-xl overflow-hidden">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={features[activeTab].image}
