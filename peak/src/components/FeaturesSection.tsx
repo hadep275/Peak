@@ -210,6 +210,13 @@ export default function FeaturesSection() {
                   src={features[activeTab].image}
                   alt={features[activeTab].title}
                   className="w-full h-auto"
+                  onError={(e) => {
+                    console.error(`Failed to load image: ${features[activeTab].image}`);
+                    console.error('Error details:', e);
+                  }}
+                  onLoad={() => {
+                    console.log(`Successfully loaded: ${features[activeTab].image}`);
+                  }}
                 />
               </div>
             </div>
